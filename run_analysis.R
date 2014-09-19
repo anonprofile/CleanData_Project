@@ -97,7 +97,7 @@ dataMerged <- aggregate(dataMerged[,!(colnames(dataMerged) %in% c("Activity", "S
                       by = list(Activity = dataMerged$Activity, Subject = dataMerged$Subject), 
                       mean)
 
-## Reshape the merged data to the long narrow tidy form (reording subjectID and activityLabel and renaming column names)
+## Reshape the merged data to the long narrow tidy form (reording Subject and Activity and naming new columns)
 dataTidy <- reshape2:::melt(dataMerged, , id.vars = c("Subject", "Activity"), variable.name = "Feature", value.name = "Mean")
 
 ## Write the tidy dataset to tab-delimited file tidy.txt in the working directory 
