@@ -99,73 +99,72 @@ The activity label for the activity performed by each subject (categorical facto
 ###Feature
 The feature measurements come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ (categorical factor):
 
-  * timeBodyAcceleration.meanX
-	* timeBodyAcceleration.meanY
-	* timeBodyAcceleration.meanZ
-	* timeBodyAcceleration.stddevX
-	* timeBodyAcceleration.stddevY
-	* timeBodyAcceleration.stddevZ
-	* timeGravityAcceleration.meanX
-	* timeGravityAcceleration.meanY
-	* timeGravityAcceleration.meanZ
-	* timeGravityAcceleration.stddevX
-	* timeGravityAcceleration.stddevY
-	* timeGravityAcceleration.stddevZ
-	* timeBodyAccelerationJerk.meanX
-	* timeBodyAccelerationJerk.meanY
-	* timeBodyAccelerationJerk.meanZ
-	* timeBodyAccelerationJerk.stddevX
-	* timeBodyAccelerationJerk.stddevY
-	* timeBodyAccelerationJerk.stddevZ
-	* timeBodyGyroscope.meanX
-	* timeBodyGyroscope.meanY
-	* timeBodyGyroscope.meanZ
-	* timeBodyGyroscope.stddevX
-	* timeBodyGyroscope.stddevY
-	* timeBodyGyroscope.stddevZ
-	* timeBodyGyroscopeJerk.meanX
-	* timeBodyGyroscopeJerk.meanY
-	* timeBodyGyroscopeJerk.meanZ
-	* timeBodyGyroscopeJerk.stddevX
-	* timeBodyGyroscopeJerk.stddevY
-	* timeBodyGyroscopeJerk.stddevZ
-	* timeBodyAccelerationMagnitude.mean
-	* timeBodyAccelerationMagnitude.stddev
-	* timeGravityAccelerationMagnitude.mean
-	* timeGravityAccelerationMagnitude.stddev
-	* timeBodyAccelerationJerkMagnitude.mean
-	* timeBodyAccelerationJerkMagnitude.stddev
-	* timeBodyGyroscopeMagnitude.mean
-	* timeBodyGyroscopeMagnitude.stddev
-	* timeBodyGyroscopeJerkMagnitude.mean
-	* timeBodyGyroscopeJerkMagnitude.stddev
-	* freqBodyAcceleration.meanX
-	* freqBodyAcceleration.meanY
-	* freqBodyAcceleration.meanZ
-	* freqBodyAcceleration.stddevX
-	* freqBodyAcceleration.stddevY
-	* freqBodyAcceleration.stddevZ
-	* freqBodyAccelerationJerk.meanX
-	* freqBodyAccelerationJerk.meanY
-	* freqBodyAccelerationJerk.meanZ
-	* freqBodyAccelerationJerk.stddevX
-	* freqBodyAccelerationJerk.stddevY
-	* freqBodyAccelerationJerk.stddevZ
-	* freqBodyGyroscope.meanX
-	* freqBodyGyroscope.meanY
-	* freqBodyGyroscope.meanZ
-	* freqBodyGyroscope.stddevX
-	* freqBodyGyroscope.stddevY
-	* freqBodyGyroscope.stddevZ
-	* freqBodyAccelerationMagnitude.mean
-	* freqBodyAccelerationMagnitude.stddev
-	* freqBodyAccelerationJerkMagnitude.mean
-	* freqBodyAccelerationJerkMagnitude.stddev
-	* freqBodyGyroscopeMagnitude.mean
-	* freqBodyGyroscopeMagnitude.stddev
-	* freqBodyGyroscopeJerkMagnitude.mean
-	* freqBodyGyroscopeJerkMagnitude.stddev
-
+* timeBodyAcceleration.meanX
+* timeBodyAcceleration.meanY
+* timeBodyAcceleration.meanZ
+* timeBodyAcceleration.stddevX
+* timeBodyAcceleration.stddevY
+* timeBodyAcceleration.stddevZ
+* timeGravityAcceleration.meanX
+* timeGravityAcceleration.meanY
+* timeGravityAcceleration.meanZ
+* timeGravityAcceleration.stddevX
+* timeGravityAcceleration.stddevY
+* timeGravityAcceleration.stddevZ
+* timeBodyAccelerationJerk.meanX
+* timeBodyAccelerationJerk.meanY
+* timeBodyAccelerationJerk.meanZ
+* timeBodyAccelerationJerk.stddevX
+* timeBodyAccelerationJerk.stddevY
+* timeBodyAccelerationJerk.stddevZ
+* timeBodyGyroscope.meanX
+* timeBodyGyroscope.meanY
+* timeBodyGyroscope.meanZ
+* timeBodyGyroscope.stddevX
+* timeBodyGyroscope.stddevY
+* timeBodyGyroscope.stddevZ
+* timeBodyGyroscopeJerk.meanX
+* timeBodyGyroscopeJerk.meanY
+* timeBodyGyroscopeJerk.meanZ
+* timeBodyGyroscopeJerk.stddevX
+* timeBodyGyroscopeJerk.stddevY
+* timeBodyGyroscopeJerk.stddevZ
+* timeBodyAccelerationMagnitude.mean
+* timeBodyAccelerationMagnitude.stddev
+* timeGravityAccelerationMagnitude.mean
+* timeGravityAccelerationMagnitude.stddev
+* timeBodyAccelerationJerkMagnitude.mean
+* timeBodyAccelerationJerkMagnitude.stddev
+* timeBodyGyroscopeMagnitude.mean
+* timeBodyGyroscopeMagnitude.stddev
+* timeBodyGyroscopeJerkMagnitude.mean
+* timeBodyGyroscopeJerkMagnitude.stddev
+* freqBodyAcceleration.meanX
+* freqBodyAcceleration.meanY
+* freqBodyAcceleration.meanZ
+* freqBodyAcceleration.stddevX
+* freqBodyAcceleration.stddevY
+* freqBodyAcceleration.stddevZ
+* freqBodyAccelerationJerk.meanX
+* freqBodyAccelerationJerk.meanY
+* freqBodyAccelerationJerk.meanZ
+* freqBodyAccelerationJerk.stddevX
+* freqBodyAccelerationJerk.stddevY
+* freqBodyAccelerationJerk.stddevZ
+* freqBodyGyroscope.meanX
+* freqBodyGyroscope.meanY
+* freqBodyGyroscope.meanZ
+* freqBodyGyroscope.stddevX
+* freqBodyGyroscope.stddevY
+* freqBodyGyroscope.stddevZ
+* freqBodyAccelerationMagnitude.mean
+* freqBodyAccelerationMagnitude.stddev
+* freqBodyAccelerationJerkMagnitude.mean
+* freqBodyAccelerationJerkMagnitude.stddev
+* freqBodyGyroscopeMagnitude.mean
+* freqBodyGyroscopeMagnitude.stddev
+* freqBodyGyroscopeJerkMagnitude.mean
+* freqBodyGyroscopeJerkMagnitude.stddev
 
 ###Mean
 Arithmetic mean calculation of each feature measurement for each activity subject pair. Values are normalized and bounded within [-1,1].
