@@ -75,8 +75,7 @@ Check the UCI HAR Dataset **README.txt** file for further details about this dat
 
 **6. Create a second, independent tidy data set from the data set created in step 4. The new tidy data set contains the average of each variable for each activity and each subject. The data set is written to a tab-delimited file called tidy.txt and has been uploaded to this repository.**
   1. Summarize "dataMerged" on the mean of each variable for each activity label and subject ID pair
-  2. Reshape "dataMerged" with melt to transform the data into the long narrow form of tidy data
-  3. Move the Subject column to the first position
+  2. Reshape "dataMerged" with melt to transform the data into the long narrow form of tidy data and move the Subject column to the first position
   4. Write the tidy dataset to tab-delimited file tidy.txt in the working directory 
 
 ---
@@ -100,48 +99,72 @@ The activity label for the activity performed by each subject (categorical facto
 ###Feature
 The feature measurements come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ (categorical factor):
 
----------------------------------------- -----------------------------------------
-timeBodyAcceleration.meanX                freqBodyAcceleration.meanX
-timeBodyAcceleration.meanY                freqBodyAcceleration.meanY
-timeBodyAcceleration.meanZ                freqBodyAcceleration.meanZ
-timeBodyAcceleration.stddevX	            freqBodyAcceleration.stddevX
-timeBodyAcceleration.stddevY	            freqBodyAcceleration.stddevY
-timeBodyAcceleration.stddevZ	            freqBodyAcceleration.stddevZ
-timeGravityAcceleration.meanX	            freqBodyAccelerationJerk.meanX
-timeGravityAcceleration.meanY	            freqBodyAccelerationJerk.meanY
-timeGravityAcceleration.meanZ	            freqBodyAccelerationJerk.meanZ
-timeGravityAcceleration.stddevX	          freqBodyAccelerationJerk.stddevX
-timeGravityAcceleration.stddevY	          freqBodyAccelerationJerk.stddevY
-timeGravityAcceleration.stddevZ	          freqBodyAccelerationJerk.stddevZ
-timeBodyAccelerationJerk.meanX	          freqBodyGyroscope.meanX
-timeBodyAccelerationJerk.meanY	          freqBodyGyroscope.meanY
-timeBodyAccelerationJerk.meanZ	          freqBodyGyroscope.meanZ
-timeBodyAccelerationJerk.stddevX	        freqBodyGyroscope.stddevX
-timeBodyAccelerationJerk.stddevY	        freqBodyGyroscope.stddevY
-timeBodyAccelerationJerk.stddevZ	        freqBodyGyroscope.stddevZ
-timeBodyGyroscope.meanX	                  freqBodyAccelerationMagnitude.mean
-timeBodyGyroscope.meanY	                  freqBodyAccelerationMagnitude.stddev
-timeBodyGyroscope.meanZ	                  freqBodyAccelerationJerkMagnitude.mean
-timeBodyGyroscope.stddevX	                freqBodyAccelerationJerkMagnitude.stddev
-timeBodyGyroscope.stddevY	                freqBodyGyroscopeMagnitude.mean
-timeBodyGyroscope.stddevZ	                freqBodyGyroscopeMagnitude.stddev
-timeBodyGyroscopeJerk.meanX	              freqBodyGyroscopeJerkMagnitude.mean
-timeBodyGyroscopeJerk.meanY	              freqBodyGyroscopeJerkMagnitude.stddev
-timeBodyGyroscopeJerk.meanZ	
-timeBodyGyroscopeJerk.stddevX
-timeBodyGyroscopeJerk.stddevY
-timeBodyGyroscopeJerk.stddevZ
-timeBodyAccelerationMagnitude.mean
-timeBodyAccelerationMagnitude.stddev
-timeGravityAccelerationMagnitude.mean
-timeGravityAccelerationMagnitude.stddev
-timeBodyAccelerationJerkMagnitude.mean
-timeBodyAccelerationJerkMagnitude.stddev
-timeBodyGyroscopeMagnitude.mean
-timeBodyGyroscopeMagnitude.stddev
-timeBodyGyroscopeJerkMagnitude.mean
-timeBodyGyroscopeJerkMagnitude.stddev
----------------------------------------- -----------------------------------------
+  * timeBodyAcceleration.meanX
+	* timeBodyAcceleration.meanY
+	* timeBodyAcceleration.meanZ
+	* timeBodyAcceleration.stddevX
+	* timeBodyAcceleration.stddevY
+	* timeBodyAcceleration.stddevZ
+	* timeGravityAcceleration.meanX
+	* timeGravityAcceleration.meanY
+	* timeGravityAcceleration.meanZ
+	* timeGravityAcceleration.stddevX
+	* timeGravityAcceleration.stddevY
+	* timeGravityAcceleration.stddevZ
+	* timeBodyAccelerationJerk.meanX
+	* timeBodyAccelerationJerk.meanY
+	* timeBodyAccelerationJerk.meanZ
+	* timeBodyAccelerationJerk.stddevX
+	* timeBodyAccelerationJerk.stddevY
+	* timeBodyAccelerationJerk.stddevZ
+	* timeBodyGyroscope.meanX
+	* timeBodyGyroscope.meanY
+	* timeBodyGyroscope.meanZ
+	* timeBodyGyroscope.stddevX
+	* timeBodyGyroscope.stddevY
+	* timeBodyGyroscope.stddevZ
+	* timeBodyGyroscopeJerk.meanX
+	* timeBodyGyroscopeJerk.meanY
+	* timeBodyGyroscopeJerk.meanZ
+	* timeBodyGyroscopeJerk.stddevX
+	* timeBodyGyroscopeJerk.stddevY
+	* timeBodyGyroscopeJerk.stddevZ
+	* timeBodyAccelerationMagnitude.mean
+	* timeBodyAccelerationMagnitude.stddev
+	* timeGravityAccelerationMagnitude.mean
+	* timeGravityAccelerationMagnitude.stddev
+	* timeBodyAccelerationJerkMagnitude.mean
+	* timeBodyAccelerationJerkMagnitude.stddev
+	* timeBodyGyroscopeMagnitude.mean
+	* timeBodyGyroscopeMagnitude.stddev
+	* timeBodyGyroscopeJerkMagnitude.mean
+	* timeBodyGyroscopeJerkMagnitude.stddev
+	* freqBodyAcceleration.meanX
+	* freqBodyAcceleration.meanY
+	* freqBodyAcceleration.meanZ
+	* freqBodyAcceleration.stddevX
+	* freqBodyAcceleration.stddevY
+	* freqBodyAcceleration.stddevZ
+	* freqBodyAccelerationJerk.meanX
+	* freqBodyAccelerationJerk.meanY
+	* freqBodyAccelerationJerk.meanZ
+	* freqBodyAccelerationJerk.stddevX
+	* freqBodyAccelerationJerk.stddevY
+	* freqBodyAccelerationJerk.stddevZ
+	* freqBodyGyroscope.meanX
+	* freqBodyGyroscope.meanY
+	* freqBodyGyroscope.meanZ
+	* freqBodyGyroscope.stddevX
+	* freqBodyGyroscope.stddevY
+	* freqBodyGyroscope.stddevZ
+	* freqBodyAccelerationMagnitude.mean
+	* freqBodyAccelerationMagnitude.stddev
+	* freqBodyAccelerationJerkMagnitude.mean
+	* freqBodyAccelerationJerkMagnitude.stddev
+	* freqBodyGyroscopeMagnitude.mean
+	* freqBodyGyroscopeMagnitude.stddev
+	* freqBodyGyroscopeJerkMagnitude.mean
+	* freqBodyGyroscopeJerkMagnitude.stddev
 
 ###Mean
 Arithmetic mean calculation of each feature measurement for each activity subject pair. Values are normalized and bounded within [-1,1].
