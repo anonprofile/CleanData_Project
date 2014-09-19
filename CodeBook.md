@@ -9,13 +9,15 @@ The tidy dataset produced by the script **run_analysis.R** is derived from the *
 * Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * Description of the original data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-**From UCI HAR Dataset README.txt:**
+**From the UCI HAR Dataset README.txt:**
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-Check the **UCI HAR Dataset README.txt file** for further details about this dataset. 
+Check the UCI HAR Dataset **README.txt** file for further details about this dataset. 
+
+---
 
 ##Preparation and transformations on the data source
 
@@ -31,6 +33,7 @@ Check the **UCI HAR Dataset README.txt file** for further details about this dat
   * /test/subject_test.txt
   * /test/X_test.txt
   * /test/y_test.txt
+  
 4. Install the reshape2 R package if necessary.
 5. Run the run_analysis.R script from the working directory.
 
@@ -44,6 +47,7 @@ Check the **UCI HAR Dataset README.txt file** for further details about this dat
   * subjectTest    <-  subject_test.txt
   * xTest          <-  x_test.txt (use features[,2] as column names)
   * yTest          <-  y_test.txt
+  
 2. Create the training dataset "dataTrain" by merging subjectTrain, xTrain, and yTrain using column bind.
 3. Create the test dataset "dataTest" by merging subjectTest, xTest, and yTest using column bind.
 4. Merge the training and test datasets using row bind to create a single dataset "dataMerged".
@@ -72,6 +76,8 @@ Clean up the column names in "dataMerged", removing unecessary spaces and expand
 3. Move the subject ID column to the first position
 4. Appropriately label the columns of the tidy data set
 2. Write the tidy dataset to tab-delimited file tidy.txt in the working directory 
+
+---
 
 ##Tidy dataset variables
 The variables of the tidy dataset are listed in order of occurence.
@@ -123,8 +129,8 @@ The feature measurements come from the accelerometer and gyroscope 3-axial raw s
 * timeBodyGyroscopeJerk.stddevZ
 * timeBodyAccelerationMagnitude.mean
 * timeBodyAccelerationMagnitude.stddev
-* imeGravityAccelerationMagnitude.mean
-* imeGravityAccelerationMagnitude.stddev
+* timeGravityAccelerationMagnitude.mean
+* timeGravityAccelerationMagnitude.stddev
 * timeBodyAccelerationJerkMagnitude.mean
 * timeBodyAccelerationJerkMagnitude.stddev
 * timeBodyGyroscopeMagnitude.mean

@@ -7,7 +7,7 @@ This repository contains my work for the Coursera "Getting and Cleaning Data" co
 The project submission includes:
 
 1. A tidy dataset called **tidy.txt** in tab-delimited format as described below (uploaded to the Coursera project submission page).
-2. A script called **run_analysis.R** for generating a tidy dataset from the source data and outputing the result to **tidy.txt**.
+2. A script called **run_analysis.R** for generating a tidy dataset from the source data and outputing the result to tidy.txt.
 3. A code book called **CodeBook.md** that describes the variables, the data, and any transformations or work performed to clean up the data.
 4. This **README.md** file explaining how all of the scripts work and how they are connected.
 
