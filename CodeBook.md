@@ -166,5 +166,6 @@ The feature measurements come from the accelerometer and gyroscope 3-axial raw s
 	* freqBodyGyroscopeJerkMagnitude.mean
 	* freqBodyGyroscopeJerkMagnitude.stddev
 
+
 ###Mean
 Arithmetic mean calculation of each feature measurement for each activity subject pair. Values are normalized and bounded within [-1,1].
