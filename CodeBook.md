@@ -53,14 +53,17 @@ Check the UCI HAR Dataset **README.txt** file for further details about this dat
   4. Merge the training and test datasets using row bind to create a single dataset "dataMerged".
 
 **3. Extract only the measurements on the mean and standard deviation for each measurement.**
+
   Assumption: Mean and standard deviation columns of interest end with either .mean or .std; the meanFreq columns are excluded.
   1. Create a logical vector using grepl to indicate columns to retain (subjectID, activityID, and mean and standard deviation columns). 
   2. Subset "dataMerged" by the logical vector of column names. 
 
 **4. Use descriptive activity names to name the activities in the data set.**
+
   Merge the activity labels into "dataMerged" by the activityID column and remove the now obsolete activityID column.
 
 **5. Appropriately label the data set with descriptive variable names.**
+
   Clean up the column names in "dataMerged", removing unecessary spaces and expanding on some abbreviations:
   * std = stddev
   * t = time
