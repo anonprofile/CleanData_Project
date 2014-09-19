@@ -30,15 +30,15 @@ library(reshape2)
 
 ## Read in the data from the features and activity_labels files and assign column names
 features <- read.table("./UCI HAR Dataset/features.txt", header = FALSE, col.names = c("featureID", "feature"))
-activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", header = FALSE, col.names = c("activityID", "activityLabel"))
+activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", header = FALSE, col.names = c("activityID", "Activity"))
 
 ## Read in the data from the train files and assign column names
-subjectTrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE, col.names = "subjectID") 
+subjectTrain <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE, col.names = "Subject") 
 xTrain <- read.table("./UCI HAR Dataset/train/x_train.txt", header = FALSE, col.names = features$feature)
 yTrain <- read.table("./UCI HAR Dataset/train/y_train.txt", header = FALSE, col.names = "activityID")
 
 ## Read in the data from the test files and assign column names
-subjectTest <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = "subjectID") 
+subjectTest <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE, col.names = "Subject") 
 xTest <- read.table("./UCI HAR Dataset/test/x_test.txt", header = FALSE, col.names = features$feature)
 yTest <- read.table("./UCI HAR Dataset/test/y_test.txt", header = FALSE, col.names = "activityID")
 
@@ -56,7 +56,7 @@ dataMerged <- rbind(dataTrain, dataTest)
 
 
 ## Create a logical vector identifying the columns containing mean and standard deviation measurements from the merged dataset
-## Retain activityID and subjectID columns; exclude meanFreq columns
+## Retain Activity and Subject columns; exclude meanFreq columns
 finalCols <- append(grepl("-mean|-std", features$feature, ignore.case = TRUE) 
                     & !grepl("-meanFreq", features$feature, ignore.case = TRUE), c(TRUE, TRUE), 0)
 
@@ -84,7 +84,7 @@ colnames(dataMerged) <- gsub("Acc","Acceleration", colnames(dataMerged))
 colnames(dataMerged) <- gsub("Gyro","Gyroscope", colnames(dataMerged))
 colnames(dataMerged) <- gsub("BodyBody","Body", colnames(dataMerged))
 colnames(dataMerged) <- gsub("(x)$",".x", colnames(dataMerged))
-colnames(dataMerged) <- gsub("(y)$",".y", colnames(dataMerged))
+colnames(dataMerged)[-(1:2)] <- gsub("(y)$",".y", colnames(dataMerged))[-(1:2)]
 colnames(dataMerged) <- gsub("(z)$",".z", colnames(dataMerged))
 
 
@@ -93,13 +93,12 @@ colnames(dataMerged) <- gsub("(z)$",".z", colnames(dataMerged))
 
 
 ## Summarize the merged data on the mean of each variable for each activity label and subject ID pair
-dataMerged <- aggregate(dataMerged[,!(colnames(dataMerged) %in% c("activityLabel", "subjectID"))], 
-                      by = list(activityLabel = dataMerged$activityLabel, subjectID = dataMerged$subjectID), 
+dataMerged <- aggregate(dataMerged[,!(colnames(dataMerged) %in% c("Activity", "Subject"))], 
+                      by = list(Activity = dataMerged$Activity, Subject = dataMerged$Subject), 
                       mean)
 
 ## Reshape the merged data to the long narrow tidy form (reording subjectID and activityLabel and renaming column names)
-dataTidy <- reshape2:::melt(dataMerged, , id.vars = c("subjectID", "activityLabel"), variable.name = "Feature", value.name = "Mean")
-colnames(dataTidy)[1:2] <- c("Subject ID", "Activity Label")
+dataTidy <- reshape2:::melt(dataMerged, , id.vars = c("Subject", "Activity"), variable.name = "Feature", value.name = "Mean")
 
 ## Write the tidy dataset to tab-delimited file tidy.txt in the working directory 
 write.table(dataTidy, './tidy.txt', row.names = FALSE, sep = '\t')
