@@ -11,7 +11,7 @@ The tidy dataset produced by the script **run_analysis.R** is derived from the *
 * Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 * Description of the original data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The experiments were carried out on a group of 30 volunteers between 19 and 48 years of age. The volunteers performed six activites while wearing a smartphone (Samsung Galaxy S II) on the waist: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING. Through the smartphone's embedded accelerometer and gyroscope, the experiment was able to capture 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. After the dataset was formed, 70% of the volunteers were randomly assigned to the training data and 30% to the test data. 
+The experiments were carried out on a group of 30 volunteers between 19 and 48 years of age. The volunteers performed six activities while wearing a smartphone (Samsung Galaxy S II) on the waist: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING. Through the smartphone's embedded accelerometer and gyroscope, the experiment was able to capture 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. After the dataset was formed, 70% of the volunteers were randomly assigned to the training data and 30% to the test data. 
 
 Consult the UCI HAR Dataset **README.txt** file for further details about this dataset. 
 
